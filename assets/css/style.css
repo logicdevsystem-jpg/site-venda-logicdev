@@ -361,7 +361,18 @@ a {
 
     font-weight: 400;
 }
+.icone-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.icone-whatsapp img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+}
 
 .resposta-rapida {
 
@@ -1077,7 +1088,12 @@ footer p {
         transform .2s ease;
 }
 
-
+.whatsapp-flutuante img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+}
 .whatsapp-flutuante:hover {
 
     transform:
@@ -1091,7 +1107,17 @@ footer p {
 
 @media (max-width: 800px) {
 
+.whatsapp-flutuante {
+    width: 52px;
+    height: 52px;
+    right: 15px;
+    bottom: 15px;
+}
 
+.whatsapp-flutuante img {
+    width: 30px;
+    height: 30px;
+}
     .hero {
 
         padding:
@@ -1103,7 +1129,7 @@ footer p {
 
     .logo-principal {
 
-        width: 190px;
+        width: 50px;
 
         margin-bottom: 25px;
     }
