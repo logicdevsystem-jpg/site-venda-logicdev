@@ -1,0 +1,1397 @@
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #ffffff;
+    color: #111111;
+    font-family: "Inter", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+
+    --preto: #111111;
+
+    --preto-2: #f7f7f9;
+
+    --roxo: #7c3aed;
+
+    --roxo-claro: #9333ff;
+
+    --roxo-neon: #8b35ff;
+
+    --branco: #ffffff;
+
+    --cinza: #666666;
+
+    --verde: #19d94f;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+    min-height: auto;
+
+    padding:
+        28px
+        20px
+        38px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(124, 58, 237, 0.08),
+            transparent 38%
+        ),
+        #ffffff;
+}
+
+
+/* brilho lateral */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: -300px;
+    top: 80px;
+
+    background: #7c3aed;
+
+    filter: blur(150px);
+
+    opacity: .05;
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    right: -300px;
+    top: 400px;
+
+    background: #7c3aed;
+
+    filter: blur(150px);
+
+    opacity: .04;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-principal {
+
+    width: 220px;
+
+    height: auto;
+
+    margin:
+        0 auto 30px;
+
+    object-fit: contain;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.hero h1 {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: clamp(
+        30px,
+        5vw,
+        52px
+    );
+
+    line-height: 1.04;
+
+    font-weight: 900;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 18px;
+
+    color: #111111;
+}
+
+
+.hero h1 span {
+
+    color: var(--roxo);
+}
+
+
+.hero-subtitulo {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #555555;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    max-width: 650px;
+
+    margin:
+        0 auto 30px;
+}
+
+
+/* =========================================================
+   VÍDEO
+   ========================================================= */
+
+.video-box {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 920px;
+
+    margin: 0 auto;
+
+    padding: 3px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b35ff,
+            #5415b8,
+            #8b35ff
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(
+            124,
+            58,
+            237,
+            .30
+        ),
+
+        0 0 70px
+        rgba(
+            124,
+            58,
+            237,
+            .08
+        );
+}
+
+
+.video-apresentacao {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 15px;
+
+    background: #000;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   BOTÃO WHATSAPP
+   ========================================================= */
+
+.btn-whatsapp {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-weight: 800;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+    cursor: pointer;
+}
+
+
+.btn-whatsapp:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+.btn-principal {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        100%,
+        430px
+    );
+
+    min-height: 60px;
+
+    margin:
+        18px auto 10px;
+
+    padding:
+        14px 20px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8d35ff,
+            #6219dc
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            124,
+            58,
+            237,
+            .30
+        );
+
+    font-size: 17px;
+
+    color: #fff;
+}
+
+
+.btn-principal:hover {
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            124,
+            58,
+            237,
+            .50
+        );
+}
+
+
+.icone-whatsapp {
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    font-weight: 400;
+}
+
+
+.resposta-rapida {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    color: #555555;
+
+    font-size: 13px;
+
+    margin-top: 8px;
+}
+
+
+.resposta-rapida span {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #18dc4d;
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            24,
+            220,
+            77,
+            .5
+        );
+}
+
+
+/* =========================================================
+   BENEFÍCIOS
+   ========================================================= */
+
+.beneficios {
+
+    border-top:
+        1px solid
+        #eeeeee;
+
+    border-bottom:
+        1px solid
+        #eeeeee;
+
+    padding:
+        42px
+        20px
+        40px;
+
+    background: #ffffff;
+}
+
+
+.titulo-beneficios {
+
+    text-align: center;
+
+    max-width: 900px;
+
+    margin:
+        0 auto
+        35px;
+}
+
+
+.titulo-beneficios h2 {
+
+    font-size: clamp(
+        22px,
+        4vw,
+        32px
+    );
+
+    line-height: 1.2;
+
+    font-weight: 900;
+
+    color: #111111;
+}
+
+
+.titulo-beneficios span {
+
+    color: var(--roxo);
+}
+
+
+/* GRID */
+
+.beneficios-grid {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 0;
+}
+
+
+/* BENEFÍCIO */
+
+.beneficio {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding:
+        10px
+        25px;
+
+    border-right:
+        1px solid
+        #dddddd;
+}
+
+
+.beneficio:last-child {
+
+    border-right: none;
+}
+
+
+.beneficio-icone {
+
+    flex-shrink: 0;
+
+    color: var(--roxo);
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+.beneficio h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: 800;
+
+    color: #111111;
+}
+
+
+.beneficio p {
+
+    color: #666666;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   QUEM SOMOS
+   ========================================================= */
+
+.quem-somos {
+
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    min-height: 480px;
+
+    padding:
+        70px
+        40px
+        50px;
+
+    display: grid;
+
+    grid-template-columns:
+        42%
+        58%;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #f7f5ff;
+}
+
+
+/* brilho */
+
+.quem-somos::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: 80px;
+    top: 10px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(
+                124,
+                58,
+                237,
+                .16
+            ),
+            transparent 70%
+        );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+}
+
+
+/* texto */
+
+.quem-texto {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-right: 30px;
+}
+
+
+.etiqueta {
+
+    display: block;
+
+    color: var(--roxo);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 13px;
+}
+
+
+.quem-texto h2 {
+
+    font-size: clamp(
+        30px,
+        5vw,
+        43px
+    );
+
+    line-height: 1.02;
+
+    font-weight: 900;
+
+    margin-bottom: 22px;
+
+    color: #111111;
+}
+
+
+.quem-texto h2 span {
+
+    color: var(--roxo);
+}
+
+
+.quem-texto p {
+
+    color: #444444;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    margin-bottom: 17px;
+
+    max-width: 460px;
+}
+
+
+/* =========================================================
+   FOTO DOS IRMÃOS
+   ========================================================= */
+
+.foto-irmaos-container {
+
+    position: relative;
+
+    min-height: 420px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+}
+
+
+/* brilho atrás da foto */
+
+.brilho-irmaos {
+
+    position: absolute;
+
+    width: 390px;
+
+    height: 390px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(
+                124,
+                58,
+                237,
+                .25
+            ),
+            rgba(
+                76,
+                20,
+                150,
+                .08
+            ) 45%,
+            transparent 72%
+        );
+
+    filter: blur(8px);
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* FOTO */
+
+.foto-dois-irmaos {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 620px;
+
+    height: 430px;
+
+    object-fit: contain;
+
+    object-position: center bottom;
+
+    filter:
+        drop-shadow(
+            0 0 20px
+            rgba(
+                124,
+                58,
+                237,
+                .20
+            )
+        );
+}
+
+
+/* =========================================================
+   NOMES
+   ========================================================= */
+
+.nome-irmao {
+
+    position: absolute;
+
+    z-index: 4;
+
+    bottom: 15px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .97
+        );
+
+    border:
+        1px solid
+        rgba(
+            124,
+            58,
+            237,
+            .45
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(
+            124,
+            58,
+            237,
+            .12
+        );
+
+    border-radius: 10px;
+
+    min-width: 145px;
+
+    padding:
+        10px
+        20px;
+
+    text-align: center;
+
+    color: #111111;
+}
+
+
+.nome-irmao strong {
+
+    display: block;
+
+    font-size: 15px;
+}
+
+
+.nome-irmao span {
+
+    display: block;
+
+    color: var(--roxo);
+
+    font-size: 13px;
+
+    margin-top: 3px;
+}
+
+
+.nome-irmao.emerson {
+
+    left: 20%;
+}
+
+
+.nome-irmao.isaac {
+
+    right: 8%;
+}
+
+
+/* =========================================================
+   CTA FINAL
+   ========================================================= */
+
+.cta-final {
+
+    max-width: 1050px;
+
+    margin:
+        0 auto 25px;
+
+    padding:
+        35px 38px;
+
+    border:
+        1px solid
+        rgba(
+            124,
+            58,
+            237,
+            .45
+        );
+
+    border-radius: 15px;
+
+    background:
+        radial-gradient(
+            circle at 100% 50%,
+            rgba(
+                124,
+                58,
+                237,
+                .08
+            ),
+            transparent 45%
+        ),
+        #ffffff;
+
+    box-shadow:
+        0 0 35px
+        rgba(
+            124,
+            58,
+            237,
+            .08
+        );
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.cta-texto h2 {
+
+    font-size: clamp(
+        25px,
+        4vw,
+        35px
+    );
+
+    line-height: 1.08;
+
+    font-weight: 900;
+
+    color: #111111;
+}
+
+
+.cta-texto h2 span {
+
+    color: var(--roxo);
+}
+
+
+.cta-texto p {
+
+    margin-top: 12px;
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    max-width: 430px;
+}
+
+
+.cta-acao {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.btn-final {
+
+    width: 100%;
+
+    min-height: 60px;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #18d64a,
+            #0ebd3c
+        );
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            19,
+            214,
+            74,
+            .20
+        );
+
+    font-size: 16px;
+
+    color: #ffffff;
+}
+
+
+.btn-final:hover {
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            19,
+            214,
+            74,
+            .35
+        );
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        15px
+        20px
+        30px;
+
+    border-top:
+        1px solid
+        #eeeeee;
+
+    background: #10101a;
+
+    color: #ffffff;
+}
+
+
+.logo-footer {
+
+    width: 145px;
+
+    margin:
+        0 auto 12px;
+}
+
+
+footer p {
+
+    color: #aaaaaa;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   WHATSAPP FLUTUANTE
+   ========================================================= */
+
+.whatsapp-flutuante {
+
+    position: fixed;
+
+    z-index: 100;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #18d64a;
+
+    box-shadow:
+        0 5px 25px
+        rgba(
+            0,
+            0,
+            0,
+            .20
+        );
+
+    font-size: 30px;
+
+    transition:
+        transform .2s ease;
+}
+
+
+.whatsapp-flutuante:hover {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+
+    .hero {
+
+        padding:
+            22px
+            14px
+            35px;
+    }
+
+
+    .logo-principal {
+
+        width: 190px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 31px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .hero-subtitulo {
+
+        font-size: 14px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .video-box {
+
+        border-radius: 14px;
+    }
+
+
+    .video-apresentacao {
+
+        border-radius: 11px;
+    }
+
+
+    .btn-principal {
+
+        font-size: 15px;
+
+        min-height: 58px;
+    }
+
+
+    /* BENEFÍCIOS */
+
+    .beneficios {
+
+        padding:
+            35px
+            15px;
+    }
+
+
+    .titulo-beneficios h2 {
+
+        font-size: 21px;
+    }
+
+
+    .beneficios-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .beneficio {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid
+            #e5e5e5;
+
+        padding:
+            0
+            0
+            18px;
+    }
+
+
+    .beneficio:last-child {
+
+        border-bottom: none;
+
+        padding-bottom: 0;
+    }
+
+
+    /* QUEM SOMOS */
+
+    .quem-somos {
+
+        grid-template-columns: 1fr;
+
+        padding:
+            55px
+            20px
+            25px;
+
+        min-height: auto;
+    }
+
+
+    .quem-texto {
+
+        padding-right: 0;
+
+        margin-bottom: 10px;
+    }
+
+
+    .quem-texto h2 {
+
+        font-size: 32px;
+    }
+
+
+    .quem-texto p {
+
+        font-size: 13px;
+    }
+
+
+    .foto-irmaos-container {
+
+        min-height: 380px;
+
+        margin-top: 5px;
+    }
+
+
+    .foto-dois-irmaos {
+
+        height: 390px;
+
+        max-width: 520px;
+    }
+
+
+    .brilho-irmaos {
+
+        width: 330px;
+
+        height: 330px;
+    }
+
+
+    .nome-irmao {
+
+        min-width: 125px;
+
+        padding:
+            8px
+            12px;
+
+        bottom: 8px;
+    }
+
+
+    .nome-irmao.emerson {
+
+        left: 8%;
+    }
+
+
+    .nome-irmao.isaac {
+
+        right: 8%;
+    }
+
+
+    /* CTA */
+
+    .cta-final {
+
+        margin:
+            0
+            14px
+            20px;
+
+        padding:
+            28px
+            20px;
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        text-align: left;
+    }
+
+
+    .cta-texto h2 {
+
+        font-size: 27px;
+    }
+
+
+    .btn-final {
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+
+    .hero h1 {
+
+        font-size: 27px;
+    }
+
+
+    .hero-subtitulo {
+
+        font-size: 13px;
+    }
+
+
+    .btn-principal {
+
+        font-size: 14px;
+
+        padding:
+            12px
+            10px;
+    }
+
+
+    .titulo-beneficios h2 {
+
+        font-size: 19px;
+    }
+
+
+    .quem-somos {
+
+        padding-top: 45px;
+    }
+
+
+    .foto-irmaos-container {
+
+        min-height: 330px;
+    }
+
+
+    .foto-dois-irmaos {
+
+        height: 340px;
+    }
+
+
+    .nome-irmao {
+
+        min-width: 110px;
+
+        font-size: 12px;
+    }
+
+
+    .nome-irmao strong {
+
+        font-size: 13px;
+    }
+
+
+    .nome-irmao span {
+
+        font-size: 11px;
+    }
+
+
+    .nome-irmao.emerson {
+
+        left: 3%;
+    }
+
+
+    .nome-irmao.isaac {
+
+        right: 3%;
+    }
+
+}
